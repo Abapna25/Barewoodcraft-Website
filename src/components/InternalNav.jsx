@@ -22,7 +22,7 @@ export default function InternalNav() {
   return (
     <header className="internal-nav" role="banner">
       <div className="internal-nav__inner">
-        <span className="internal-nav__logo" aria-label="Barewedcrafts internal tools">
+        <span className="internal-nav__logo" aria-label="Barewoodcraft internal tools">
           BWC Internal
         </span>
 
