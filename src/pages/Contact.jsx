@@ -136,10 +136,10 @@ export default function Contact() {
             {/* ── FORM ── */}
             <div>
               <h2 id="form-heading" className="section-title" style={{ marginBottom: '0.5rem' }}>
-                Client Inquiry Form
+                Woodworking Inquiry Form
               </h2>
               <p style={{ color: 'var(--text-muted)', marginBottom: '2rem', fontSize: '0.9375rem' }}>
-                Fill out the form below and we'll be in touch shortly.
+                Fill out the form below and Tyler will be in touch shortly.
               </p>
 
               {status === 'error' && (
@@ -158,7 +158,7 @@ export default function Contact() {
                 ref={formRef}
                 onSubmit={handleSubmit}
                 noValidate
-                aria-label="Client inquiry form"
+                aria-label="Woodworking inquiry form"
               >
                 <div className="form-grid form-grid--2col">
                   <div className="form-group">
@@ -222,9 +222,10 @@ export default function Contact() {
                   </legend>
                   <div className="form-radio-group" role="radiogroup" aria-required="true">
                     {[
-                      { value: 'woodworking', label: 'Custom Woodworking / DIY Project' },
-                      { value: 'events', label: 'Event Planning' },
-                      { value: 'both', label: 'Both Services' },
+                      { value: 'furniture', label: 'Custom Furniture' },
+                      { value: 'liveedge', label: 'Live-Edge Slab Piece' },
+                      { value: 'builtin', label: 'Built-Ins / Shelving' },
+                      { value: 'diy', label: 'DIY Project / Kit' },
                       { value: 'unsure', label: 'Not sure yet — just exploring' },
                     ].map(({ value, label }) => (
                       <label key={value} className="form-radio-label">
@@ -281,11 +282,11 @@ export default function Contact() {
                   <div className="contact-detail">
                     <span className="contact-detail-label">Email</span>
                     <a
-                      href="mailto:hello@barewedcrafts.com"
+                      href="mailto:hello@barewoodcraft.com"
                       className="contact-detail-value"
                       style={{ color: 'var(--gold-text)', textDecoration: 'underline' }}
                     >
-                      hello@barewedcrafts.com
+                      hello@barewoodcraft.com
                     </a>
                   </div>
 
@@ -296,12 +297,7 @@ export default function Contact() {
 
                   <div className="contact-detail">
                     <span className="contact-detail-label">Woodworking Inquiries</span>
-                    <span className="contact-detail-value">Tyler handles all custom builds and DIY kit requests.</span>
-                  </div>
-
-                  <div className="contact-detail">
-                    <span className="contact-detail-label">Event Planning Inquiries</span>
-                    <span className="contact-detail-value">Akanksha manages all event consultations and bookings.</span>
+                    <span className="contact-detail-value">Tyler handles all custom builds, live-edge pieces, built-ins, and DIY kit requests.</span>
                   </div>
 
                   <hr className="divider" />
