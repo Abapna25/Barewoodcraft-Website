@@ -4,7 +4,6 @@ import { NavLink, Link } from 'react-router-dom'
 const NAV_LINKS = [
   { to: '/', label: 'Home', end: true },
   { to: '/woodworking', label: 'Woodworking' },
-  { to: '/events', label: 'Events' },
   { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ]
@@ -52,8 +51,8 @@ export default function Navbar() {
   return (
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`} role="banner">
       <div className="navbar__inner">
-        <Link to="/" className="navbar__logo" aria-label="Barewedcrafts — Go to homepage">
-          Bare<span>wed</span>crafts
+        <Link to="/" className="navbar__logo" aria-label="Barewoodcraft — Go to homepage">
+          Bare<span>wood</span>craft
         </Link>
 
         <nav className="navbar__links" aria-label="Primary navigation">

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 const GALLERY_ITEMS = [
   { seed: 'wood-table', caption: 'Custom Dining Table' },
   { seed: 'wood-shelf', caption: 'Floating Wall Shelves' },
-  { seed: 'event-decor', caption: 'Garden Wedding Setup' },
   { seed: 'wood-cabinet', caption: 'Handcrafted Cabinet' },
-  { seed: 'event-floral', caption: 'Reception Florals' },
   { seed: 'wood-bench', caption: 'Entry Bench' },
+  { seed: 'wood-liveedge', caption: 'Live-Edge Coffee Table' },
+  { seed: 'wood-builtin', caption: 'Custom Built-In Shelving' },
 ]
 
 export default function Home() {
@@ -18,25 +18,25 @@ export default function Home() {
         aria-labelledby="hero-heading"
         style={{
           backgroundImage:
-            'url(https://picsum.photos/seed/barewedcrafts-hero/1920/1080)',
+            'url(https://picsum.photos/seed/barewoodcraft-hero/1920/1080)',
         }}
       >
         <div className="hero__overlay" aria-hidden="true" />
         <div className="hero__content container">
-          <p className="hero__eyebrow">Custom Woodworking &amp; Event Planning</p>
+          <p className="hero__eyebrow">Custom Hardwood Furniture &amp; Built-Ins</p>
           <h1 id="hero-heading" className="hero__title">
             Made by Hand.<br />
-            <em>Remembered Forever.</em>
+            <em>Built to Last.</em>
           </h1>
           <p className="hero__subtitle">
-            Barewedcrafts brings together two disciplines — artisan woodworking and curated event experiences — under one roof. Every piece, every moment, crafted with intention.
+            Barewoodcraft creates heirloom-quality hardwood furniture and custom built-ins — each piece designed for the space it lives in and the people who use it.
           </p>
           <div className="btn-group">
             <Link to="/woodworking" className="btn btn--primary">
-              Explore Woodworking
+              View the Work
             </Link>
-            <Link to="/events" className="btn btn--ghost">
-              View Events
+            <Link to="/contact" className="btn btn--ghost">
+              Commission a Piece
             </Link>
           </div>
         </div>
@@ -46,13 +46,13 @@ export default function Home() {
       <section className="section section--cream" aria-labelledby="gallery-heading">
         <div className="container">
           <div className="section-intro--center text-center mb-4">
-            <p className="eyebrow">Our Work</p>
+            <p className="eyebrow">Recent Work</p>
             <span className="gold-rule gold-rule--center" aria-hidden="true" />
             <h2 id="gallery-heading" className="section-title">
-              A Glimpse Into the Studio
+              A Glimpse Into the Shop
             </h2>
             <p className="lead mt-2">
-              From heirloom furniture to celebration tablescapes — here's a sample of what we create.
+              From live-edge dining tables to custom built-ins — a sample of what comes out of the workshop.
             </p>
           </div>
 
@@ -85,20 +85,20 @@ export default function Home() {
         <div className="container">
           <div className="who-grid">
             <div>
-              <p className="eyebrow">Who We Are</p>
+              <p className="eyebrow">The Studio</p>
               <span className="gold-rule" aria-hidden="true" />
               <h2 id="who-heading" className="section-title">
-                A Studio Built on Craft &amp; Connection
+                Built on Craft &amp; Honest Materials
               </h2>
               <p style={{ marginTop: '1.25rem', lineHeight: '1.85', color: 'var(--text-body)', fontSize: '1.0125rem' }}>
-                Barewedcrafts is the creative partnership of Tyler and Akanksha — two people who share an obsession with things made well. Tyler brings years of woodworking craftsmanship to every timber joint and finish. Akanksha translates that same precision into the art of event planning, where every detail tells a story.
+                Barewoodcraft is Tyler Reid's woodworking studio — focused on hardwood furniture, live-edge slabs, and custom built-ins made the right way. No shortcuts, no flat-pack. Just honest joinery, quality wood, and pieces designed to outlast the trends.
               </p>
               <p style={{ marginTop: '1rem', lineHeight: '1.85', color: 'var(--text-body)', fontSize: '1.0125rem' }}>
-                Together, we serve clients who value quality over convenience, permanence over trend, and meaning over the mundane.
+                Every commission is built to fit the space and the person it's for. If you have a project in mind, let's talk.
               </p>
               <div className="btn-group" style={{ marginTop: '2rem' }}>
                 <Link to="/about" className="btn btn--outline">
-                  Meet the Team
+                  About Tyler
                 </Link>
                 <Link to="/contact" className="btn btn--outline-gold">
                   Start a Project
@@ -108,7 +108,7 @@ export default function Home() {
             <div aria-hidden="true">
               <img
                 src="https://picsum.photos/seed/studio-workshop/700/840"
-                alt="Barewedcrafts studio workshop"
+                alt="Barewoodcraft studio workshop"
                 className="who-img"
               />
             </div>
@@ -116,65 +116,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TWO SERVICE CTAs ── */}
-      <section className="section--sm" aria-labelledby="services-heading">
-        <div className="container">
-          <h2
-            id="services-heading"
-            className="section-title text-center mb-4"
-            style={{ marginBottom: '2rem' }}
-          >
-            Two Services, One Vision
-          </h2>
-          <div className="cta-cards">
-            {/* Woodworking CTA */}
-            <Link
-              to="/woodworking"
-              className="cta-card"
-              aria-label="Explore Custom Woodworking — view projects and commission options"
-            >
-              <img
-                src="https://picsum.photos/seed/woodcraft-cta/900/675"
-                alt=""
-                aria-hidden="true"
-              />
-              <div className="cta-card__overlay">
-                <p className="eyebrow" style={{ color: 'var(--gold-light)' }}>
-                  Custom Woodworking
-                </p>
-                <h3 className="cta-card__title">Furniture &amp; DIY Projects</h3>
-                <span className="btn btn--ghost btn--sm" aria-hidden="true">
-                  Explore →
-                </span>
-              </div>
-            </Link>
-
-            {/* Events CTA */}
-            <Link
-              to="/events"
-              className="cta-card"
-              aria-label="Explore Event Planning — view services and pricing"
-            >
-              <img
-                src="https://picsum.photos/seed/event-planning-cta/900/675"
-                alt=""
-                aria-hidden="true"
-              />
-              <div className="cta-card__overlay">
-                <p className="eyebrow" style={{ color: 'var(--gold-light)' }}>
-                  Event Planning
-                </p>
-                <h3 className="cta-card__title">Curated Experiences</h3>
-                <span className="btn btn--ghost btn--sm" aria-hidden="true">
-                  Explore →
-                </span>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIAL / BRAND QUOTE ── */}
+      {/* ── BRAND QUOTE ── */}
       <section className="section section--dark" aria-labelledby="quote-heading">
         <div className="container text-center">
           <span className="gold-rule gold-rule--center gold-rule--lg" aria-hidden="true" />
@@ -194,7 +136,7 @@ export default function Home() {
               "The best things in life are made with patience, love, and really good wood."
             </p>
             <footer style={{ marginTop: '1.5rem', color: 'var(--gold-light)', fontSize: '0.875rem', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>
-              — Tyler &amp; Akanksha, Barewedcrafts
+              — Tyler, Barewoodcraft
             </footer>
           </blockquote>
           <div style={{ marginTop: '2.5rem' }}>

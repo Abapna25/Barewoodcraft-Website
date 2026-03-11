@@ -4,11 +4,8 @@ import InternalLayout from './layouts/InternalLayout'
 import ProtectedRoute from './components/ProtectedRoute'
 import Home from './pages/Home'
 import Woodworking from './pages/Woodworking'
-import Events from './pages/Events'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import Tyler from './pages/resume/Tyler'
-import Akanksha from './pages/resume/Akanksha'
 import Login from './pages/internal/Login'
 import Calculator from './pages/internal/Calculator'
 import WoodRates from './pages/internal/WoodRates'
@@ -22,11 +19,8 @@ export default function App() {
         <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/woodworking" element={<Woodworking />} />
-          <Route path="/events" element={<Events />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/resume/tyler" element={<Tyler />} />
-          <Route path="/resume/akanksha" element={<Akanksha />} />
         </Route>
 
         {/* Internal login — standalone, no nav, no auth guard */}

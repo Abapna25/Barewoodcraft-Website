@@ -8,34 +8,51 @@ export default function Footer() {
       <div className="container">
         <div className="footer__inner">
           <div className="footer__brand">
-            <Link to="/" className="footer__logo" aria-label="Barewedcrafts homepage">
-              Bare<span>wed</span>crafts
+            <Link to="/" className="footer__logo" aria-label="Barewoodcraft homepage">
+              Bare<span>wood</span>craft
             </Link>
             <p className="footer__tagline">
-              Crafting heirloom woodwork and curating unforgettable events — built with care, intention, and a love for the handmade.
+              Crafting heirloom hardwood furniture and custom built-ins — built with care, intention, and a love for the handmade.
             </p>
           </div>
 
           <nav className="footer__col" aria-label="Services navigation">
-            <span className="footer__col-title">Services</span>
-            <Link to="/woodworking" className="footer__link">Custom Woodworking</Link>
+            <span className="footer__col-title">Woodworking</span>
+            <Link to="/woodworking" className="footer__link">Custom Furniture</Link>
+            <Link to="/woodworking" className="footer__link">Live-Edge Slabs</Link>
+            <Link to="/woodworking" className="footer__link">Built-Ins &amp; Shelving</Link>
             <Link to="/woodworking" className="footer__link">DIY Projects</Link>
-            <Link to="/events" className="footer__link">Event Planning</Link>
-            <Link to="/events" className="footer__link">Event Pricing</Link>
           </nav>
 
           <nav className="footer__col" aria-label="Company navigation">
             <span className="footer__col-title">Company</span>
-            <Link to="/about" className="footer__link">About Us</Link>
+            <Link to="/about" className="footer__link">About</Link>
             <Link to="/contact" className="footer__link">Contact</Link>
-            <Link to="/resume/tyler" className="footer__link">Tyler's Resume</Link>
-            <Link to="/resume/akanksha" className="footer__link">Akanksha's Resume</Link>
           </nav>
         </div>
 
-        <div className="footer__bottom">
-          <span>© {year} Barewedcrafts. All rights reserved.</span>
-          <span>Crafted with intention by Tyler &amp; Akanksha</span>
+        <div className="footer__bottom" style={{ flexDirection: 'column', gap: '0.625rem', alignItems: 'center', textAlign: 'center' }}>
+          <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a
+              href="https://barewedcrafts.com"
+              className="footer__link"
+              style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', opacity: 0.8 }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore our Events services →
+            </a>
+            <a
+              href="https://tylerdavisreid.com"
+              className="footer__link"
+              style={{ fontSize: '0.8125rem', color: 'var(--text-muted)', opacity: 0.8 }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tyler's Professional Resume →
+            </a>
+          </div>
+          <span>© {year} Barewoodcraft. All rights reserved.</span>
         </div>
       </div>
     </footer>
