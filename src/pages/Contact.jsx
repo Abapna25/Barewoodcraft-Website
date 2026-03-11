@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser'
 const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID'   // e.g. 'service_xxxxxxx'
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'  // e.g. 'template_xxxxxxx'
 const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY'   // found in EmailJS Account > General
-const DESTINATION_EMAIL   = 'hello@barewedcrafts.com' // replace with your actual email
+const DESTINATION_EMAIL   = 'hello@barewoodcraft.com' // replace with your actual email
 // ─────────────────────────────────────────────────────────────
 
 const INITIAL = {
