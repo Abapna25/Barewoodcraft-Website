@@ -256,7 +256,7 @@ export default function Calculator() {
                     aria-hidden="true"
                   >
                     {['Wood Type', 'Length (in)', 'Width (in)', 'Thickness (in)', 'Qty', 'BF', ''].map((h, i) => (
-                      <span key={i} style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)' }}>
+                      <span key={i} style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-on-dark-muted)' }}>
                         {h}
                       </span>
                     ))}
@@ -341,7 +341,7 @@ export default function Calculator() {
                         <button
                           type="button"
                           onClick={() => removeLineItem(item.id)}
-                          style={{ color: '#C0392B', fontSize: '1.25rem', lineHeight: 1, background: 'none', border: 'none', cursor: 'pointer', padding: '0.25rem', alignSelf: 'center' }}
+                          style={{ color: 'var(--danger)', fontSize: '1.25rem', lineHeight: 1, background: 'none', border: 'none', cursor: 'pointer', padding: '0.25rem', alignSelf: 'center' }}
                           aria-label={`Remove line item ${idx + 1}`}
                           disabled={form.lineItems.length === 1}
                         >

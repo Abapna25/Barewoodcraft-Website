@@ -1,5 +1,5 @@
 /* ============================================================
-   BAREWEDCRAFTS — GLOBAL DESIGN SYSTEM
+   BAREWOODCRAFT — GLOBAL DESIGN SYSTEM
    ============================================================ */
 
 /* ========================= RESET ========================= */
@@ -37,6 +37,12 @@ input, textarea, select { font: inherit; }
   --warning-bg: #FFF8E0;
   --warning-text: #7A5C00;
   --warning-border: #E8C840;
+  --danger: #C0392B;
+  --danger-hover: #A93226;
+
+  /* Text on dark/charcoal backgrounds */
+  --text-on-dark: rgba(255,255,255,0.78);
+  --text-on-dark-muted: rgba(255,255,255,0.75);
 
   /* Typography */
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -242,11 +248,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn--danger {
-  background: #C0392B;
+  background: var(--danger);
   color: var(--white);
-  border-color: #C0392B;
+  border-color: var(--danger);
 }
-.btn--danger:hover { background: #A93226; border-color: #A93226; }
+.btn--danger:hover { background: var(--danger-hover); border-color: var(--danger-hover); }
 
 .btn-group {
   display: flex;
@@ -666,7 +672,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9375rem;
 }
 .alert--success { background: var(--success-bg); color: var(--success-text); border-color: #4CAF50; }
-.alert--error { background: var(--error-bg); color: var(--error-text); border-color: #C0392B; }
+.alert--error { background: var(--error-bg); color: var(--error-text); border-color: var(--danger); }
 .alert--warning {
   background: var(--warning-bg);
   color: var(--warning-text);

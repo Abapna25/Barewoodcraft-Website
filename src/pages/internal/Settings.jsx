@@ -172,7 +172,7 @@ export default function Settings() {
                 `After misc buffer = after overhead × (1 + ${settings.miscPercent || 0}%)`,
                 `Total = after misc × (1 + ${settings.taxPercent || 0}% tax)`,
               ].map((step, i) => (
-                <li key={i} style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.7 }}>
+                <li key={i} style={{ fontSize: '0.875rem', color: 'var(--text-on-dark-muted)', lineHeight: 1.7 }}>
                   {step}
                 </li>
               ))}

@@ -124,7 +124,7 @@ export default function Contact() {
           <h1 id="contact-heading" className="page-title" style={{ color: 'var(--white)' }}>
             Start a Project
           </h1>
-          <p className="lead" style={{ color: 'rgba(255,255,255,0.78)', maxWidth: '480px', marginTop: '1.25rem' }}>
+          <p className="lead" style={{ color: 'var(--text-on-dark)', maxWidth: '480px', marginTop: '1.25rem' }}>
             Tell us about your vision. Every great piece starts with a conversation.
           </p>
         </div>

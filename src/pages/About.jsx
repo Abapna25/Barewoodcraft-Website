@@ -13,7 +13,7 @@ export default function About() {
           <h1 id="about-heading" className="page-title" style={{ color: 'var(--white)' }}>
             About Tyler
           </h1>
-          <p className="lead" style={{ color: 'rgba(255,255,255,0.78)', maxWidth: '520px', marginTop: '1.25rem' }}>
+          <p className="lead" style={{ color: 'var(--text-on-dark)', maxWidth: '520px', marginTop: '1.25rem' }}>
             One woodworker. One studio. An unwavering commitment to making things that last.
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function About() {
           <h2 id="about-cta-heading" className="section-title" style={{ color: 'var(--white)', marginBottom: '1rem' }}>
             Have a Project in Mind?
           </h2>
-          <p className="lead" style={{ color: 'rgba(255,255,255,0.75)', marginBottom: '2rem' }}>
+          <p className="lead" style={{ color: 'var(--text-on-dark-muted)', marginBottom: '2rem' }}>
             Whether you have detailed plans or just a rough idea — let's talk it through.
           </p>
           <Link to="/contact" className="btn btn--primary">

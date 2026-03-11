@@ -83,7 +83,7 @@ export default function Woodworking() {
           <h1 id="woodworking-heading" className="page-title" style={{ color: 'var(--white)', maxWidth: '600px' }}>
             Custom Woodworking &amp; DIY Projects
           </h1>
-          <p className="lead" style={{ color: 'rgba(255,255,255,0.8)', maxWidth: '500px', marginTop: '1.25rem' }}>
+          <p className="lead" style={{ color: 'var(--text-on-dark)', maxWidth: '500px', marginTop: '1.25rem' }}>
             Heirloom-quality pieces built from sustainably sourced hardwoods, designed to fit your space and outlive trends.
           </p>
         </div>
@@ -237,7 +237,7 @@ export default function Woodworking() {
           <h2 id="wood-cta-heading" className="section-title" style={{ color: 'var(--white)', marginBottom: '1rem' }}>
             Ready to Commission a Piece?
           </h2>
-          <p className="lead" style={{ color: 'rgba(255,255,255,0.75)', marginBottom: '2rem' }}>
+          <p className="lead" style={{ color: 'var(--text-on-dark-muted)', marginBottom: '2rem' }}>
             Let's talk through your vision. No obligation — just a conversation.
           </p>
           <Link to="/contact" className="btn btn--primary">
