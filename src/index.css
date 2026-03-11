@@ -1199,3 +1199,136 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   border: 0;
 }
+
+/* ========================= DARK MODE ========================= */
+/*
+ * Strategy: override CSS variables where possible. For surfaces that use
+ * --white as a background (navbar, cards, forms), add explicit overrides
+ * because --white must remain #FFFFFF for text-on-dark usage (hero titles,
+ * footer text, button labels on gold, etc.) and cannot be remapped globally.
+ */
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    color-scheme: dark;
+
+    /* Page & section backgrounds */
+    --off-white:    #1a1a1a;
+    --light-cream:  #222222;
+
+    /* Borders */
+    --border:       #333333;
+    --border-light: #2c2c2c;
+
+    /* Text */
+    --text-body:    #e8e5e0;
+    --text-dark:    #f0ede8;
+    --text-muted:   #a0a0a0;
+
+    /* Gold: main gold unchanged — works on dark. Remap gold-text from the
+       dark-on-white variant to full gold, which passes contrast on dark surfaces. */
+    --gold-text:    #c4953a;
+    --gold-pale:    #2e2415;
+
+    /* Dark sections: charcoal slightly deeper than page bg so .section--dark,
+       .page-hero, and the footer still read as distinct dark regions. */
+    --charcoal:     #111111;
+    --charcoal-mid: #191917;
+
+    /* Status colors — muted dark-friendly tones */
+    --success-bg:    #192819;
+    --success-text:  #6dbf6d;
+    --error-bg:      #2e1919;
+    --error-text:    #d97070;
+    --warning-bg:    #2a2410;
+    --warning-text:  #c9a830;
+    --warning-border:#a08820;
+
+    /* On-dark text vars (slightly brighter — page is already dark overall) */
+    --text-on-dark:       rgba(255,255,255,0.85);
+    --text-on-dark-muted: rgba(255,255,255,0.80);
+  }
+
+  /* ── Navbar ──────────────────────────────────────────── */
+  /* Uses --white as background, so must be overridden explicitly */
+  .navbar {
+    background: #1a1a1a;
+    border-bottom-color: #333333;
+  }
+  .navbar__mobile {
+    background: #1a1a1a;
+    border-top-color: #333333;
+  }
+
+  /* ── Card & surface backgrounds ──────────────────────── */
+  /* All of these reference --white; override to the dark surface tone */
+  .card,
+  .card--elevated,
+  .service-card,
+  .pricing-card,
+  .person-card,
+  .calc-form-card,
+  .cost-breakdown,
+  .project-item,
+  .resume-page,
+  .settings-card {
+    background: #242424;
+  }
+
+  /* Lift elevation shadows so they remain visible on dark backgrounds */
+  .card--elevated { box-shadow: 0 4px 24px rgba(0,0,0,0.45); }
+  .service-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.45); }
+
+  /* ── Form inputs ─────────────────────────────────────── */
+  .form-input,
+  .form-select,
+  .form-textarea {
+    background: #1a1a1a;
+    color: var(--text-body);
+    border-color: var(--border);
+  }
+
+  /* ── Rates table ─────────────────────────────────────── */
+  .rates-table { background: #242424; }
+  .rates-table tr:hover td { background: #2a2a2a; }
+  .rates-table .inline-input {
+    background: #1a1a1a;
+    color: var(--text-body);
+    border-color: var(--border);
+  }
+
+  /* ── Calculator line-item rows ───────────────────────── */
+  /* References --off-white which is already overridden, but kept explicit
+     so the inset row reads slightly darker than its parent card */
+  .line-item-row { background: #1e1e1e; }
+
+  /* ── Buttons ─────────────────────────────────────────── */
+  /* btn--primary (gold bg, charcoal text) and btn--ghost (white border/text)
+     both work unchanged in dark mode. Only the outline variants need updating
+     because they use --charcoal (now #111) for text/border — invisible on
+     dark card backgrounds. */
+  .btn--outline {
+    color: var(--text-dark);
+    border-color: #666666;
+  }
+  .btn--outline:hover,
+  .btn--outline:focus-visible {
+    background: var(--text-dark);
+    color: #1a1a1a;
+  }
+
+  .btn--outline-gold {
+    color: var(--text-dark);
+  }
+  .btn--outline-gold:hover,
+  .btn--outline-gold:focus-visible {
+    color: #1a1a1a;
+  }
+
+  /* ── Stale badge (hardcoded colors in base rules) ────── */
+  .stale-badge {
+    background: #332b00;
+    color: #d4b44a;
+    border-color: #a08820;
+  }
+}
