@@ -102,13 +102,7 @@ export default function Woodworking() {
           </div>
 
           <ul
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '1.5rem',
-              alignItems: 'stretch',
-              marginTop: '2.5rem',
-            }}
+            className="services-grid"
             role="list"
             aria-label="Woodworking services"
           >
